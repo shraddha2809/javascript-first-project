@@ -7,6 +7,12 @@ body {
   * {
     box-sizing: border-box;
   }
+
+  h2{
+    font-size: 67px;
+    font-family: 'Potta One', cursive;
+    color: black;
+  }
   
   /* Remove margins and padding from the list */
   ul {
@@ -44,19 +50,6 @@ body {
     text-decoration: line-through;
   }
   
-  /* Add a "checked" mark when clicked on */
-  /* ul li.checked::before {
-    content: '';
-    position: absolute;
-    border-color: #fff;
-    border-style: solid;
-    border-width: 0 2px 2px 0;
-    top: 10px;
-    left: 16px;
-    transform: rotate(45deg);
-    height: 15px;
-    width: 7px;
-  } */
   
   /* Style the close button */
   .close {
@@ -92,6 +85,7 @@ body {
     border: none;
     border-radius: 0;
     width: 75%;
+  
     padding: 10px;
     float: left;
     font-size: 16px;

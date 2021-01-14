@@ -1,16 +1,17 @@
 // Create a new list item when clicking on the "Add" button
-function newElement() {
+function newElement() {                                     //li create
     var li = document.createElement("li");
     var inputValue = document.getElementById("myInput").value;
     var t = document.createTextNode(inputValue);
     li.appendChild(t);
-    if (inputValue === '') {
+    if (inputValue === '') {                            
       alert("You must write something!");
     } else {
       document.getElementById("my-list").appendChild(li);
     }
     document.getElementById("myInput").value = "";
-  
+
+  // create close button
     var span = document.createElement("SPAN");
      var txt = document.createTextNode("\u00D7");   // source code for multiplication    \u00D7
     span.className = "close";
@@ -23,10 +24,23 @@ function newElement() {
         div.style.display = "none";
       }
     }
+///update button
+    var span = document.createElement("SPAN");
+    var txt = document.createTextNode("&#10149");   // source code for edit    \u00D7
+   span.className = "edit";
+   span.appendChild(txt);
+   li.appendChild(span);
+ 
+   for (i = 0; i < close.length; i++) {
+     edit[i].onclick = function() {
+       var div = this.parentElement;
+       div.style.display = "new";
+     }
+   }
 }
 
 
-//close button
+// work close button
 var close = document.getElementsByClassName("close");
 var i;
 for (i = 0; i < close.length; i++) {
@@ -36,6 +50,17 @@ for (i = 0; i < close.length; i++) {
   }
 }
 
+
+//edit
+
+// var edit = document.getElementsByClassName("edit");
+// var i;
+// for (i = 0; i < edit.length; i++) {
+//   close[i].onclick = function() {
+//     var div = this.parentElement;
+//     div.style.display = "none";
+//   }
+// }
 //update list
 
 // var textnode=document.createTextNode("red(3)");
